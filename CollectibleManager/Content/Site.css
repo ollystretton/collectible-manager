@@ -1,0 +1,111 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.page-bg {
+    /*background: url('../img/bg.jpg');*/
+    background-color:#f4f4f4;
+    background-size: cover;
+    background-position-x: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.page-lighten {
+    background-color: rgba(255,255,255,0.9);
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+ul.navbar-nav li {
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    font-weight:700;
+}
+
+.panel {
+    border-radius: 0;
+}
+
+    .panel img {
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
+    }
+
+    .panel-manufacturer {
+        position:absolute;
+        background-color:#666;
+        color:#fff;
+        padding:5px;
+        display:inline-block;
+        top:0px;
+        right:0px;
+        font-weight:700;
+    }
+
+    .panel-model {
+        position: absolute;
+        background-color: #ff006e;
+        color: #fff;
+        padding: 5px;
+        display: inline-block;
+        top: 0px;
+        left: 0px;
+        font-weight: 700;
+    }
+
+    .panel-description {
+        position: absolute;
+        width:100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        color: #000;
+        padding: 5px;
+        bottom: 0px;
+        left: 0px;
+        font-weight: 700;
+    }
+        
+
+
+
+.panel-body {
+    padding:10px;
+}
+
+.page-wrapper {
+    margin-top:30px;
+}

@@ -1,0 +1,66 @@
+﻿@model CollectibleManager.Models.Collectible
+
+@{
+    ViewBag.Title = "View Collectible";
+}
+
+<h2>@Model.Manufacturer.Name - @Model.ModelNumber</h2>
+
+<div class="row">
+	<div class="col-lg-6">
+		@{
+            if (Model.Image != null)
+            {
+                var base64 = Convert.ToBase64String(Model.Image.Content);
+                var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                <img src="@imgSrc" class="img-responsive" />
+            }
+
+		}
+
+		
+		<table class="table">
+			<tbody>
+				<tr>
+					<td>Manufacturer</td>
+					<td>@Model.Manufacturer.Name</td>
+				</tr>
+				<tr>
+					<td>Model Type</td>
+					<td>@Model.ModelType</td>
+				</tr>
+				<tr>
+					<td>Model</td>
+					<td>@Model.ModelNumber</td>
+				</tr>
+				<tr>
+					<td>Description</td>
+					<td>@Model.Description</td>
+				</tr>
+				<tr>
+					<td>Date Purchased</td>
+					<td>
+						@(Model.DatePurchased.HasValue ? Model.DatePurchased.Value.ToString("dd/MM/yyyy") : "")
+					</td>
+				</tr>
+				<tr>
+					<td>Date Logged</td>
+					<td>@Model.DateLogged.ToString("dd/MM/yyyy")</td>
+				</tr>
+				<tr>
+					<td>Purchase Price</td>
+					<td>@(Model.PurchasePrice.HasValue ? Model.PurchasePrice.Value.ToString() : "")</td>
+				</tr>
+				<tr>
+					<td>Estimated Value</td>
+					<td>@(Model.EstimatedValue.HasValue ? Model.EstimatedValue.Value.ToString() : "")</td>
+					</trEstimatedValue
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>

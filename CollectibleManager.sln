@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectibleManager", "CollectibleManager\CollectibleManager.csproj", "{BA5EB82F-CB56-4E83-8C05-31AF05DECD46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA5EB82F-CB56-4E83-8C05-31AF05DECD46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA5EB82F-CB56-4E83-8C05-31AF05DECD46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA5EB82F-CB56-4E83-8C05-31AF05DECD46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA5EB82F-CB56-4E83-8C05-31AF05DECD46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91955426-E6C3-4620-B8F9-B980AB95C898}
+	EndGlobalSection
+EndGlobal

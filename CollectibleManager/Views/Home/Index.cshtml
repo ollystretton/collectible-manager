@@ -1,0 +1,72 @@
+﻿@model List<CollectibleManager.Models.Collectible>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    @*<div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Manufacturer</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Model</th>
+                        <th>Purch. Date</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var c in Model)
+                    {
+                        <tr>
+                            <td>
+                                @{
+                                    if (c.Image != null)
+                                    {
+                                        var base64 = Convert.ToBase64String(c.Image.Content);
+                                        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                                        <img src="@imgSrc" height="50" />
+                                    }
+
+                                }
+
+
+                            </td>
+                            <td style="vertical-align:middle">@c.Manufacturer.Name</td>
+                            <td style="vertical-align:middle">@c.ModelType</td>
+                            <td style="vertical-align:middle">@c.Description</td>
+                            <td style="vertical-align:middle">@c.ModelNumber</td>
+                            <td style="vertical-align:middle">@(c.DatePurchased.HasValue ? c.DatePurchased.Value.ToString("dd/MM/yy") : "")</td>
+                            <td style="vertical-align:middle"><a href="@Url.Action("ViewCollectible", "Home", new { id = c.Id })">View</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>*@
+        @foreach (var c in Model)
+        {
+            <div class="col-md-2">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div style="position:relative">
+                            @if (c.Image != null)
+                            {
+                                var base64 = Convert.ToBase64String(c.Image.Content);
+                                var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                                <img src="@imgSrc" />
+                            }
+                            <div class="panel-manufacturer">@c.Manufacturer.Name</div>
+                            <div class="panel-model">@c.ModelNumber</div>
+                            <div class="panel-description">@c.Description</div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        }
+
+
+</div>
